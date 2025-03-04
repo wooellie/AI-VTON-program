@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+  <!-- 上传按钮 -->
+  <button bindtap="chooseImage">上传</button>
+  <!-- 添加图片的矩形框 -->
+  <view class="image-box">
+    <!-- 如果有选择的图片，显示图片 -->
+    <image wx:if="{{imagePath}}" src="{{imagePath}}" mode="aspectFit"></image>
+  </view>
+</view>
+</scroll-view>
