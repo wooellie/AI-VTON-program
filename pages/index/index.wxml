@@ -1,0 +1,25 @@
+
+<view class="container">
+  <view class="upload-section">
+    <view wx:if="{{!humanImg}}" class="upload-placeholder" bindtap="uploadHumanImg"></view>
+    <image wx:else src="{{humanImg}}" class="upload-img" bindtap="uploadHumanImg"></image>
+    <text>上传模特图片</text>
+  </view>
+  <view class="upload-section">
+    <view wx:if="{{!garmentImg}}" class="upload-placeholder" bindtap="uploadGarmentImg"></view>
+    <image wx:else src="{{garmentImg}}" class="upload-img" bindtap="uploadGarmentImg"></image>
+    <text>上传服饰图片</text>
+  </view>
+  <input placeholder="Garment Description" bindinput="inputGarmentDes" class="input" />
+  <button bindtap="submitTryon">试穿</button>
+  <view class="result-section">
+    <view wx:if="{{resultImg}}" class="result-item">
+      <image src="{{resultImg}}" class="result-img"></image>
+      <button bindtap="downloadResultImg" class="download-btn">下载结果图片</button>
+    </view>
+    <view wx:if="{{maskedImg}}" class="result-item">
+      <image src="{{maskedImg}}" class="result-img"></image>
+      <button bindtap="downloadMaskedImg" class="download-btn">下载蒙版图片</button>
+    </view>
+  </view>
+</view>
